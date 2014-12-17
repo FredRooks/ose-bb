@@ -3,7 +3,7 @@
   "preferGlobal": true,
   "version": "0.1.0",
   "author": "Jan Snasel <snaselj@gmail.com>",
-  "description": "Open Smart Environment UI based on Firefox OS Building Blocks",
+  "description": "Open Smart Environment HTML5 frontend",
   "contributors": [
     {
       "name": "Jan Snasel",

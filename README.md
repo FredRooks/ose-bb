@@ -5,12 +5,12 @@ Building Blocks](http://buildingfirefoxos.com/) using
 [jQuery](http://www.jquery.com).
 
 Each browser page (tab) displaying the OSE frontend is an [OSE
-instance]. As part of the base [OSE plugin] configuration, a
-[peer], representing the backend OSE instance, is created and
+instance](http://opensmartenvironment.github.io/doc/modules/ose.peer.html). As part of the base [OSE plugin](http://opensmartenvironment.github.io/doc/modules/ose.plugin.html) configuration, a
+[peer](http://opensmartenvironment.github.io/doc/classes/ose.lib.peer.remote.html), representing the backend OSE instance, is created and
 connected to.
 
 The connection is realized via a WebSocket in a standard OSE
-[peer-to-peer] way. All information needed for displaying requested
+[peer-to-peer](http://opensmartenvironment.github.io/doc/modules/ose.peer.html) way. All information needed for displaying requested
 content is exchanged through this WebSocket channel. After a
 successful connection is established, content is displayed using
 dynamic injection into the `<body>`.
@@ -34,11 +34,12 @@ to understand the basic principles covered by this documentation.
 Use of this software is currently recommended only for users that
 wish participate in the development process (see Contributions).
 
-TODO: Make contribution a link
+TODO: Make "Contributions" a link
 
 ## Getting started
-To get started with OSE, refer to the [ose-bundle] package and
-[Media player example application].
+To get started with OSE, refer to the [ose-bundle](http://opensmartenvironment.github.io/doc/modules/bundle.html) package and
+[Media player example application](http://opensmartenvironment.github.io/doc/modules/bundle.media.html). You can read the entire OSE
+documentation [here]( http://opensmartenvironment.github.io/doc).
 
 ## Initialization
 
@@ -65,13 +66,13 @@ components of the web application. `<body>` contains two boxes:
 
 The `content` box displays a "pagelet" specified by the state object.
 
-Read more about [Boxes] ...
+Read more about [Boxes](http://opensmartenvironment.github.io/doc/modules/bb.box.html) ...
 
 
 ### Dialogs
 Dialogs are fullscreen modal controls.
 
-Read more about [Dialogs] ...
+Read more about [Dialogs](http://opensmartenvironment.github.io/doc/modules/bb.dialog.html) ...
 
 
 ### Pagelets
@@ -83,20 +84,20 @@ The dashboard pagelet is a starting point for the user.
 Two other basic pagelets are the entry pagelet (displays one
 entry) and the list pagelet (displays a list of entries).
 
-Each [entry kind] can define own UI layout and behaviour for any pagelet type displaying entry in an individual file.
+Each [entry kind](http://opensmartenvironment.github.io/doc/classes/ose.lib.kind.html) can define own UI layout and behaviour for any pagelet type displaying entry in an individual file.
 
 Pagelets can create and contain various widgets (see `lib/widget`
 directory) and other pagelets.
 
-Read more about [Pagelets] ...
+Read more about [Pagelets](http://opensmartenvironment.github.io/doc/modules/bb.pagelet.html) ...
 
 
 ### Widgets
 A Widget is an easily reusable control visually represented by
 HTML5 elements. Their behaviour is controlled by instances of
-descendants of the [Widget class].
+descendants of the [Widget class](http://opensmartenvironment.github.io/doc/classes/bb.lib.widget.html).
 
-Read more about [Widgets] ...
+Read more about [Widgets](http://opensmartenvironment.github.io/doc/modules/bb.widget.html) ...
 
 
 ### State objects
@@ -104,7 +105,7 @@ The state object defines what is displayed by the application. It
 can be saved in the browser's history. Boxes and pagelets receive
 the state object in as a parameter of their `display()` methods.
 
-Read more about [State objects] ...
+Read more about [State objects](http://opensmartenvironment.github.io/doc/modules/bb.stateObj.html) ...
 
 
 ## Modules
@@ -117,16 +118,16 @@ Core singleton of bb plugin.
 
 This singleton is available through the `Ose.ui` property.
 
-Module [OSE Building Blocks core] reference ... 
+Module [OSE Building Blocks core](http://opensmartenvironment.github.io/doc/classes/bb.lib.html) reference ... 
 
 ### Building Blocks content
 This singleton defines which files to provide to browsers.
 
-Module [Building Blocks content] reference ... 
+Module [Building Blocks content](http://opensmartenvironment.github.io/doc/classes/bb.content.html) reference ... 
 
 ## Contributions
 To get started contributing or coding, it is good to read about the
-two main npm packages [ose] and [ose-bb].
+two main npm packages [ose](http://opensmartenvironment.github.io/doc/modules/ose.html) and [ose-bb](http://opensmartenvironment.github.io/doc/modules/bb.html).
 
 This software is in the pre-alpha stage. At the moment, it is
 premature to file bugs. Input is, however, much welcome in the form
@@ -134,6 +135,6 @@ of ideas, comments and general suggestions.  Feel free to contact
 us via
 [github.com/opensmartenvironment](https://github.com/opensmartenvironment).
 
-## License
+## Licence
 This software is licensed under the terms of the [GNU GPL version
 3](../LICENCE) or later
