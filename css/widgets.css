@@ -1,0 +1,57 @@
+/* Slideswitch */
+/* Workaround for small clickable area of slideswitch */
+label.pack-checkbox, label.pack-radio, label.pack-switch {
+  height: 6rem !important;
+  width: 6rem !important;
+}
+
+/* Slider */
+div[role="slider"].disabled progress::-moz-progress-bar {
+  background-color: grey;
+}
+
+div[role="slider"].disabled progress[value]::-webkit-progress-value {
+  background: grey;
+}
+
+/* Slider in <li> */
+[data-type="list"] > ul > li > div[role="slider"] {
+  overflow: show;
+  display: block;
+  margin-top: -1rem;
+  margin-left: 0.5rem;
+}
+
+[data-type="list"] > ul > li > div[role="slider"] button {
+  top: 40%;
+}
+
+/* ??? */
+/* div[role="slider"] > label.icon { */
+/*   background: no-repeat right top; */
+/*   background-size: 3rem auto; */
+/* } */
+
+
+/* Toolbar */
+div[role="toolbar"] {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  width: calc(100% - 30px);
+  overflow: hidden;
+  position: static;
+/*  background-color: black;*/
+}
+
+div[role="toolbar"] button {
+  width: 4rem;
+  padding: 0;
+}
+
+[role="toolbar"] .icon:before,
+[role="toolbar"] .action-icon:before,
+[role="toolbar"] .comms-icon:before,
+[role="toolbar"] .media-icon:before {
+  left: 0.5rem;
+}

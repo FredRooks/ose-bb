@@ -1,0 +1,299 @@
+/* ----------------------------------
+ * Value selector (Single & Multiple)
+ * ---------------------------------- */
+
+/* Main dialog setup */
+form[role="dialog"][data-type="value-selector"] {
+    background: url("../../../buildingBlocks/style/../../../buildingBlocks/style/value_selector/images/ui/pattern.png") repeat scroll left top, url("../../../buildingBlocks/style/value_selector/images/ui/gradient.png") no-repeat scroll left top / 100% 100% rgba(0, 0, 0, 0);
+    bottom: 0;
+    color: #FFFFFF;
+    font-size: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 0 0 7rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+form[role="dialog"][data-type="value-selector"]:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    margin-left: -1px;
+    vertical-align: top;
+    width: 1px;
+}
+
+form[role="dialog"][data-type="value-selector"] > section {
+    -moz-box-sizing: padding-box;
+    display: inline-block;
+    height: 100%;
+    padding: 0 1.5rem;
+    vertical-align: top;
+    white-space: normal;
+    width: 100%;
+}
+
+form[role="dialog"][data-type="value-selector"] h1 {
+/*    background: url("../../../buildingBlocks/style/value_selector/images/ui/alpha.png") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    border-bottom: 0.1rem solid #616262;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    line-height: 1rem;
+    margin: 0 -1.5rem;
+    padding: 2.5rem 3rem 1rem;
+    position: relative;
+}
+
+form[role="dialog"][data-type="value-selector"] h1:before {
+    border-top: 0.1rem solid #222323;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 4.6rem;
+}
+
+form[role="dialog"][data-type="value-selector"] menu {
+    background: url("../../../buildingBlocks/style/value_selector/images/ui/pattern.png") repeat scroll left top #2D2D2D;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 1.5rem;
+    position: absolute;
+    right: 0;
+    white-space: nowrap;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button {
+    -moz-box-sizing: border-box;
+    border: medium none;
+    border-radius: 0.3rem;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    height: 3.8rem;
+    line-height: 3.8rem;
+    margin: 0 0 1rem;
+    outline: medium none;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    text-shadow: -1px -1px 0 #830B0B;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button[type="reset"], form[role="dialog"][data-type="value-selector"] menu button[type="submit"] {
+    color: #333333;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+form[role="dialog"][data-type="value-selector"] menu button[type="reset"] {
+    background-color: #FAFAFA;
+    background-image: url("../../../buildingBlocks/style/value_selector/images/ui/button_reset.png");
+    border: 1px solid #9F9F9F;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button[type="submit"] {
+    background-color: #00CAF2;
+    background-image: url("../../../buildingBlocks/style/value_selector/images/ui/button_submit.png");
+    border: 1px solid #00ACCE;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button[type="reset"]:active, form[role="dialog"][data-type="value-selector"] menu button[type="submit"]:active {
+    background: none repeat scroll 0 0 #008AAA;
+    border: 1px solid #008AAA;
+    color: #333333;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button[type="reset"][disabled], form[role="dialog"][data-type="value-selector"] menu button[type="submit"][disabled] {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../../../buildingBlocks/style/value_selector/images/ui/button_special_disabled.png");
+    border: medium none;
+    color: #4A4A4A;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+form[role="dialog"][data-type="value-selector"] menu button:last-child {
+    margin-left: 1rem;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button, form[role="dialog"][data-type="value-selector"] menu button:first-child {
+    margin: 0;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button {
+    width: calc((100% - 1rem) / 2);
+}
+
+form[role="dialog"][data-type="value-selector"] menu button.full {
+    width: 100%;
+}
+
+form[role="dialog"][data-type="value-selector"] [role="listbox"] {
+    margin: 0 -1.5rem;
+    max-height: calc(100% - 4.6rem);
+    overflow: auto;
+    padding: 0 1.5rem;
+    position: relative;
+}
+
+form[role="dialog"][data-type="value-selector"] .scrollable:before {
+    background: url("../../../buildingBlocks/style/value_selector/images/ui/shadow.png") repeat-x scroll left top, url("../../../buildingBlocks/style/value_selector/images/ui/shadow-invert.png") repeat-x scroll left bottom rgba(0, 0, 0, 0);
+    bottom: 6.4rem;
+    content: "";
+    display: block;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 4.7rem;
+}
+
+form[role="dialog"][data-type="value-selector"] [role="listbox"] li {
+    border-bottom: 1px solid #666666;
+    color: #FFFFFF;
+    font-size: 2.2rem;
+    font-weight: lighter;
+    height: 5.9rem;
+    line-height: 5.9rem;
+    list-style: none outside none;
+    margin: 0;
+    padding-bottom: 1px;
+    position: relative;
+    transition: background-color 0.2s ease 0s;
+}
+
+form[role="dialog"][data-type="value-selector"] [role="listbox"] li span {
+    padding: 0 1.5rem;
+}
+
+form[role="dialog"][data-type="value-selector"] [role="listbox"] li:active, form[role="dialog"][data-type="value-selector"] [role="listbox"] li:active label span {
+    background: none repeat scroll 0 0 #00ABCC;
+    color: #FFFFFF !important;
+}
+
+form[role="dialog"][data-type="value-selector"] [role="listbox"] li input {
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+}
+
+form[role="dialog"][data-type="value-selector"] [role="listbox"] li input:checked + span, form[role="dialog"][data-type="value-selector"] [role="listbox"] li[aria-checked="true"] span {
+    background: url("../../../buildingBlocks/style/value_selector/images/icons/checked.png") no-repeat scroll right center / 1.9rem auto content-box rgba(0, 0, 0, 0);
+    color: #00ABCD;
+}
+
+form[role="dialog"][data-type="value-selector"] [role="listbox"] li a, form[role="dialog"][data-type="value-selector"] [role="listbox"] li label {
+    border-bottom: 1px solid #000000;
+    outline: medium none;
+}
+
+form[role="dialog"][data-type="value-selector"] [role="listbox"] li a, form[role="dialog"][data-type="value-selector"] [role="listbox"] li label, form[role="dialog"][data-type="value-selector"] [role="listbox"] li label span {
+    color: #FFFFFF;
+    display: block;
+    text-decoration: none;
+}
+
+form[role="dialog"][data-type="value-selector"] menu {
+    background: url("../../../buildingBlocks/style/value_selector/images/ui/pattern.png") repeat scroll left top #2D2D2D;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 1.5rem;
+    position: absolute;
+    right: 0;
+    white-space: nowrap;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button::-moz-focus-inner {
+    border: medium none;
+    outline: medium none;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button {
+    -moz-box-sizing: border-box;
+/*    background: url("../BB/buttons/images/ui/default.png") repeat-x scroll left bottom / auto 100% #FAFAFA;*/
+    border: 0.1rem solid #A6A6A6;
+    border-radius: 0.3rem;
+    color: #333333;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    height: 3.8rem;
+    line-height: 3.8rem;
+    margin: 0 0 1rem;
+    outline: medium none;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    text-shadow: 0.1rem 0.1rem 0 rgba(255, 255, 255, 0.3);
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button:active, form[role="dialog"][data-type="value-selector"] menu button.recommend:active, a.recommend[role="button"]:active {
+    border-color: #008AAA;
+    color: #333333;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button.recommend {
+    background-color: #00CAF2;
+/*    background-image: url("../BB/buttons/images/ui/recommend.png");*/
+    border-color: #008EAB;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button.danger, a.danger[role="button"] {
+    background-color: #B70404;
+/*    background-image: url("../BB/buttons/images/ui/danger.png");*/
+    border-color: #820000;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button.danger:active {
+    background-color: #890707;
+/*    background-image: url("../BB/buttons/images/ui/danger-press.png");*/
+}
+
+form[role="dialog"][data-type="value-selector"] > menu > button[disabled] {
+    background: none repeat scroll 0 0 #5F5F5F;
+    border-color: #4D4D4D;
+    color: #4D4D4D;
+    pointer-events: none;
+    text-shadow: none;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button:last-child {
+    margin-left: 1rem;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button, form[role="dialog"][data-type="value-selector"] menu button:first-child {
+    margin: 0;
+}
+
+form[role="dialog"][data-type="value-selector"] menu button {
+    width: calc((100% - 1rem) / 2);
+}
+
+form[role="dialog"][data-type="value-selector"] menu button.full {
+    width: 100%;
+}

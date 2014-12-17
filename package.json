@@ -1,0 +1,44 @@
+{
+  "name": "ose-bb",
+  "preferGlobal": true,
+  "version": "0.1.0",
+  "author": "Jan Snasel <snaselj@gmail.com>",
+  "description": "Open Smart Environment UI based on Firefox OS Building Blocks",
+  "contributors": [
+    {
+      "name": "Jan Snasel",
+      "email": "snaselj@gmail.com"
+    },
+    {
+      "name": "Fred Rooks",
+      "email": "fred@fredrooks.com"
+    }
+  ],
+  "main": "./lib/index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opensmartenvironment/ose-bb.git"
+  },
+  "keywords": [
+    "open smart environment",
+    "gui",
+    "frontend",
+    "html5",
+    "javascript"
+  ],
+  "dependencies": {
+    "hammerjs": ">=2.0.4*",
+    "jquery-hammerjs": ">=2.0.0*",
+    "jquery": ">=2.1.1",
+    "moment": "*",
+    "punycode": "*",
+    "url": "*"
+  },
+  "peerDependencies": {
+    "ose": "*"
+  },
+  "scripts": {
+    "prepublish": "scripts/getDepends"
+  },
+  "license": "GPL-3.0+"
+}

@@ -1,0 +1,113 @@
+#!/bin/bash
+
+# TODO: Write bash script for downloading stuff (branches, releases,
+# individual files, etc. ) from github based on a simple JSON object.
+
+set -e
+
+if [ -d "depends" ]; then
+  rm -rf depends
+fi
+
+mkdir depends
+
+cd depends
+
+
+mkdir Building-Blocks
+
+cd Building-Blocks
+
+wget https://github.com/buildingfirefoxos/Building-Blocks/tarball/gh-pages
+
+tar xf gh-pages --strip-components=1
+
+rm gh-pages
+
+cd ..
+
+
+# Get gaia icons
+wget https://github.com/gaia-components/gaia-icons/archive/master.zip
+
+unzip master.zip
+
+rm master.zip
+
+
+mkdir jquery-cookie
+
+cd jquery-cookie
+
+wget https://github.com/carhartl/jquery-cookie/tarball/master
+
+tar xf master --strip-components=1
+
+rm master
+
+cd ..
+
+
+#mkdir jquery.hammer
+
+#cd jquery.hammer
+
+#wget https://raw.githubusercontent.com/hammerjs/jquery.hammer.js/master/jquery.hammer.js
+
+#cd ..
+
+
+mkdir jquery.transit 
+
+cd jquery.transit
+
+wget http://ricostacruz.com/jquery.transit/jquery.transit.min.js
+
+cd ..
+
+
+mkdir jquery-visibility
+
+cd jquery-visibility
+
+wget https://github.com/mathiasbynens/jquery-visibility/archive/v1.0.7.tar.gz
+
+gunzip -d v1.0.7.tar.gz
+
+tar xf v1.0.7.tar --strip-components=1
+
+cd ..
+
+
+mkdir qrcodejs
+
+cd qrcodejs
+
+wget https://github.com/davidshimjs/qrcodejs/tarball/master
+
+tar xf master --strip-components=1
+
+rm master
+
+cd ..
+
+
+mkdir ndollar
+
+cd ndollar
+
+wget https://depts.washington.edu/aimgroup/proj/dollar/ndollar.js
+
+cd ..
+
+
+mkdir pdollar
+
+cd pdollar
+
+wget https://depts.washington.edu/aimgroup/proj/dollar/pdollar.js
+
+cd ..
+
+
+exit 0

@@ -1,0 +1,22 @@
+{
+  "name": "Open Smart Environment",
+  "description": "Frontend for OSE",
+  "version": "0.1",
+  "developer": {
+    "name": "Jan Snášel",
+    "url": "http://opensmartenvironment.org"
+  },
+  "launch_path": "/",
+  "appcache_path": "/ose-bb/webapp/offline.appcache",
+  "icons": {
+    "16": "/ose-bb/webapp/icons/appicon-16.png",
+    "48": "/ose-bb/webapp/icons/appicon-48.png",
+    "128": "/ose-bb/webapp/icons/appicon-128.png"
+  },
+  "installs_allowed_from": ["*"],
+  "fullscreen": "true",
+  "default_locale": "en",
+  "permissions": {
+    "systemXHR": {}
+  }
+}

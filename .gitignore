@@ -1,0 +1,8 @@
+*~
+#*#
+*_assh_*
+*.swp
+*.log
+depends
+node_modules
+build/

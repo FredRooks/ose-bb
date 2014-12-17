@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Open Smart Environment",
+  "description": "Frontend for OSE",
+  "version": "0.1",
+  "app": {
+    "urls": [
+      "*://10.166.25.8"
+    ],
+    "launch": {
+      "web_url": "http://10.166.25.8:4434"
+    }
+  },
+  "icons": {
+    "16": "/ose-bb/webapp/icons/appicon-16.png",
+    "48": "/ose-bb/webapp/icons/appicon-48.png",
+    "128": "/ose-bb/webapp/icons/appicon-128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

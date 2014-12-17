@@ -1,0 +1,188 @@
+/* TODO: Tidy up styles */
+
+html {
+  overflow-x: hidden;
+}
+
+.scrollable,
+section[role="region"] {
+  overflow-x: hidden;
+}
+
+.unselectable {
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* List {{{1 */
+
+[data-type="list"] > ul > li > p:not(:only-child) {
+  line-height: 2rem !important;
+}
+
+aside img.rectangle {
+  border-radius: 0 !important;
+}
+
+li.expanded {
+/*  height: auto !important;*/
+  height: 100%;
+  min-height: 6rem;
+}
+
+ul.bottomLine {
+  border-bottom: 0.1rem solid #E7E7E7;
+}
+
+li.nowPlaying > p {
+  overflow: visible;
+}
+
+/* Dialog {{{1 */
+form[role='dialog'][data-type='action'] > section {
+  width: auto;
+  height: auto;
+  overflow: auto;
+  margin-bottom: 7rem;
+}
+
+.scrollable.header.toolbar {
+  height: calc(100% - 9rem);
+}
+
+button[value="1"] {
+  background: #01c5ed;
+}
+
+button[value="2"] {
+  background: red;
+}
+
+/* Touch {{{1 */
+div.touchKeyarea {
+  position: absolute;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+canvas.touchCanvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+menu.buttonsRight {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 70px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Header {{{1 */
+header > h1 {
+  text-align: left !important;
+}
+
+header > .smallHeading {
+  height: 33% !important;
+  text-align: left !important;
+}
+
+header > .subHeading {
+  height: 66% !important;
+  text-align: left !important;
+}
+
+header > .smallHeading > span {
+  position: absolute;
+  margin-top: -1.2rem !important;
+  font-size: 1.5rem !important;
+  height: 33% !important;
+}
+
+header > .subHeading > span {
+  position: absolute;
+  top: 0.8rem;
+  height: 66% !important;
+}
+
+form[role='search'] {
+  position: absolute;
+  top: 0;
+  height: 4.5rem;
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+/* Workaround for missing menu icon. This will probably become unnecessary with the next version of Building Blocks */
+section[role="region"] > header:first-child .icon-menu {
+  background-image: url(/ose-bb/depends/Building-Blocks/style/headers/images/icons/menu.png) !important;
+}
+
+/* Input area buttons {{{1 */
+form[role="search"] span.btn {
+  float: right;
+  min-width: 6rem;
+  height: 3.7rem;
+  padding: 0 1.5rem;
+  border: none;
+  color: #00aac5;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 3.7rem;
+  width: auto;
+  border-radius: 0;
+  margin: 0;
+  position: relative;
+  background: none;
+  font-style: italic;
+  /*overflow: visible;*/
+  overflow: hidden;
+}
+
+form[role="search"] span.btn:after {
+  content: "";
+  position: absolute;
+  left: -0.1rem;
+  top: 0.7rem;
+  bottom: 0.7rem;
+  width: 0.1rem;
+  background: #c7c7c7;
+}
+
+form[role="search"] span.btn.icon:active,
+form[role="search"] span:active {
+  background: #b2f2ff;
+  color: #fff;
+}
+
+span[role="toolbar"] > span {
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+li[role="oseToolbar"] {
+  height: auto;
+}
+
+span[role="toolbar"] > span[value="1"] {
+  background-color: #01c5ed;
+}
+
+span[role="toolbar"] > span[value="2"] {
+  background-color: red;
+}
